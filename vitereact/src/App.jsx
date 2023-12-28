@@ -1,12 +1,10 @@
 import { useState } from 'react'
-
+import Pooh from './pooh'
 function App() {
 
   return (
     <>
-      <h1>
-        Chai aur react | vite
-      </h1>
+      <Pooh />
     </>
   )
 }
