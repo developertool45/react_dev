@@ -3,7 +3,7 @@ import './App.css'
 
 
 function App() {
-  let [color, setColor] = useState('olive');
+  const [color, setColor] = useState('olive');
 
   return (
     <div className="w-full  h-screen duration-200 " style={{ backgroundColor: color }}>
@@ -13,8 +13,8 @@ function App() {
             style={{ backgroundColor: "red" }}> Red  </button>
           <button onClick={() => setColor("green")} className=' outline-none px-4 py-1 rounded-full shadow-lg text-white mr-2'
             style={{ backgroundColor: "green" }}> green </button>
-          <button onClick={() => setColor("blue")} className=' outline-none px-4 py-1 rounded-full shadow-lg text-black mr-2'
-            style={{ backgroundColor: "yellow" }}> blue </button>
+          <button onClick={() => setColor("blue")} className=' outline-none px-4 py-1 rounded-full shadow-lg text-white mr-2'
+            style={{ backgroundColor: "blue" }}> blue </button>
 
           <button onClick={() => setColor("orange")} className=' outline-none px-4 py-1 rounded-full shadow-lg text-black mr-2'
             style={{ backgroundColor: "orange" }}> orange </button>
