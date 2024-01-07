@@ -1,38 +1,56 @@
- .outer {
-    height: 200px;
-    width: 70px;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(0, 0, 0);
-    padding: 10px;
-
-   
-}
-.div1 {
-    height: 60px;
-    width: 60px;
-    background-color: red; 
+.face{
+    height: 400px;
+    width: 400px;
+    background-color: #ff4102;
     border-radius: 50%;
-   margin-bottom: 5px;
-      border: 1px solid rgb(0, 0, 0);
+}
+
+.mouth{
+    height: 80px;
+    width: 200px;
+    background-color: #1e120d;
+    border-radius: 0 0 130px 130px;
+    position: absolute;
+    top: 280px;
+    left: 100px;
+    outline: 2px solid gray;
+    box-shadow: 5px 5px 5px rgb(40, 40, 40);
     
 }
-.div2 {
-    height: 60px;
-    width: 60px;
-    background-color: yellow; 
+.eyes{
+    height: 50px;
+    width: 50px;
+    background-color: #1e120d;    
     border-radius: 50%;
-     margin-bottom: 5px;
-        border: 1px solid rgb(0, 0, 0);
+    position: absolute;
+    top: 100px;
+    left: 100px;
 }
-.div3 {
-    height: 60px;
-    width: 60px;
-    background-color: green; 
+.eye-right{    
+    height: 50px;
+    width: 50px;
+    background-color: #1e120d;    
     border-radius: 50%;
-     margin-bottom: 5px;
-        border: 1px solid rgb(0, 0, 0);
+    position: absolute;
+    left: 150px;
+    top:5px;
+    
 }
-ul li {
-    display: inline;
-    padding-left: 10px;
+.nose{
+    height: 20px;
+    width: 100px;
+    background-color:#d4d3d3ba;    
+    border-radius: 0 0 20px 20px ; 
+    position: relative;
+    top: 200px;
+    left: 140px;
+}
+.white-eye-left, .white-eye-right{
+    height: 40px;
+    width: 40px;
+    background-color: #ffffffba; 
+    border-radius: 50%;
+    position: relative;
+    left: 5px;
+    top: 10px;
 }
