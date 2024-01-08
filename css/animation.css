@@ -1,0 +1,12 @@
+.box{
+    height: 100px;
+    width: 200px;
+    background-color: aqua;
+    animation: myAnimation 2s ease-in 2s 3 ;
+}
+
+@keyframes myAnimation {
+    from{ width: 100px;}
+    to{ width: 200px}
+    
+}

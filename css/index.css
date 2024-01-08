@@ -2,21 +2,34 @@
     height: 500px;
     width: 600px;
     background-color: rgb(55, 46, 39);
-    display: grid;
+    display: inline-grid;
     text-align: center;
     /* grid-template-rows: 60px 60px 60px 60px ;
     grid-template-columns: 200px 200px 200px ; */
     grid-template-rows: repeat(7,1fr);
     grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:  1fr 1fr 1fr;
     row-gap: 10px;
     column-gap: 10px;
+    justify-items: center;
+    align-items: center;
    
    
     
 }
 .items{
-    /* height: 60px;
-    width: 100px; */
+    height: 50px;
+    width: 100px;
     background-color: rgb(253, 145, 13);
      border: 2px solid rgb(255, 255, 255);
+}
+.one{
+    /* justify-self: start; */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
+.two {
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+
 }

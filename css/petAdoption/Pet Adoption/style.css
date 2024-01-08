@@ -1,0 +1,74 @@
+h2 {
+    color: orange;
+}
+
+h1>span,
+h4 {
+    color: rgb(147, 98, 9);
+}
+
+#pets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    height: 550px;
+    width: 450px;
+    border: 2px solid rgb(28, 28, 28);
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+img {
+    height: 300px;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+@media (max-width:650px) and (min-width: 360px) {
+    #pets {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .card {
+        height: 550px;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    img {
+        height: 200px;
+        width: 100%;
+        border-radius: 20px;
+
+    }
+
+}
+
+@media (max-width:1000px) and (min-width: 650px) {
+    #pets {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card {
+        height: 600px;
+        width: 95%;
+        margin-left: 20px;
+    }
+
+    img {
+        height: 300px;
+        width: 100%;
+        border-radius: 20px;
+
+    }
+
+}
