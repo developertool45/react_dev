@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-clr {
+    background-color: #597E52;
+
+}
+
+.fontclr a {
+    color: #FFFFEC;
+}
+
+.fontclr a:hover {
+    color: #F1E4C3;
+}
+
+
+
+body {
+    margin: 10px;
+}
+
+.marquee {
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scrolling 50s linear infinite;
+
+}
+
+.marquee-item {
+    flex: 0 0 16vw;
+    margin: 0 10px;
+    /*   flex: 0 0 20vw; */
+    /*   margin: 0 2vw; */
+}
+
+.marquee-item img {
+    display: block;
+    width: 100%;
+    /*   padding: 0 20px; */
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translatex(-144vw);
+    }
+}
