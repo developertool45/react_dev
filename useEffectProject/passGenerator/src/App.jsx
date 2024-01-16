@@ -1,11 +1,12 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 // import './App.css'
 
 function App() {
   const [length, setLength] = useState(8);
   const [numberAllow, setnumberAllowed] = useState(false);
   const [charAllow, setCharAllow] = useState(false);
-  const [Password, setPassword] = useState(" ");
+  const [Password, setPassword] = useState("");
+
 
   const passwordGenerator = useCallback(() => {
     let pass = "";
@@ -15,29 +16,34 @@ function App() {
 
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
-
       pass += str.charAt(char);
     }
+
     setPassword(pass);
 
   }, [length, numberAllow, charAllow, setPassword]);
 
+  useEffect(() => {
+    passwordGenerator()
+  }, [length, numberAllow, charAllow, passwordGenerator])
+
+
   return (
     <>
-      <div className=" w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-5 text-orange-500 bg-gray-700">
-        <h1 className="text-white text-center py-3 ">Password Generator</h1>
+      <div className=" w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-4 my-4 text-orange-500 bg-gray-700">
+        <h1 className="text-white text-center text-3xl font-semibold">Password Generator</h1>
 
-        <div className="flex shadow rounded-lg overflow-hidden py-5">
+        <div className="flex rounded-lg overflow-hidden py-5">
           <input
             type="text"
+            className="outline-none w-full py-2 px-2  rounded-l-lg"
+            placeholder=" Password"
             value={Password}
-            className="outline-none w-full py-1 px-3 rounded-lg"
-            placeholder="enter password"
             readOnly
           />
-          <button className="outline-none rounded-lg  bg-blue-700 text-white px-3 py-0.5 shrink-0">
-            {" "}
-            copy
+          <button className="outline-none rounded-r-lg   bg-blue-700 text-white px-3 py-0.5 shrink-0">
+
+            Copy
           </button>
         </div>
         <div className="flex text-sm gap-2">
@@ -47,12 +53,36 @@ function App() {
               max={100}
               value={length}
               className="cursor-pointer"
-              onChange={(e) => { setLength(e.target.value) }}
+              onChange={(e) => setLength(e.target.value)}
             />
             <label> length : {length}</label>
           </div>
-          <div className=" flex items-center gap-x-1"></div>
+          <div className="flex items-center gap-x-1"></div>
+          <input type="checkbox"
+            defaultChecked={numberAllow}
+            id="numberInput"
+            onChange={() => {
+              setnumberAllowed((prev) => !prev)
+            }}
+
+          />
+          <label htmlFor="numberInput">Number</label>
+
+          <input type="checkbox"
+            defaultChecked={charAllow}
+            id="charInput"
+            onChange={() => {
+              setCharAllow((prev) => !prev)
+            }}
+
+          />
+          <label htmlFor="charInput">Characters</label>
+
+
         </div>
+
+
+
       </div>
     </>
   );
